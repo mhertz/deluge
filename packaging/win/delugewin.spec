@@ -107,6 +107,7 @@ datas += copy_metadata('twisted', recursive=True)
 # Copy UI/Plugin and translation files to where pyinstaller expects
 package_data = collect_data_files('deluge')
 datas += package_data
+datas += [('../../deluge/ui/console', 'deluge/ui/console')]
 
 icon = [src for src, dest in package_data if src.endswith('deluge.ico')][0]
 
